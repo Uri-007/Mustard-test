@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
+@font-face {
+  font-family: "Cities Typeface";
+  src:
+    url("../../assets/fonts/CitiesTypeface.woff2") format("woff2"),
+    url("../../assets/fonts/CitiesTypeface.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --navbar-h: 76.91px;
+  --green: #29362F;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--navbar-h));
+  margin-top: var(--navbar-h);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  z-index: 0;
+}
+
+/* El verde de la imagen ocupa ~28% del ancho en desktop.
+   Las cards arrancan justo después: left: 29% */
+.hero-card {
+  position: absolute;
+  z-index: 2;
+  top: 18%;
+  left: 49%;
+  right: 4%;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(3px);
+  padding: 0px 0px 12px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.hero-title {
+  font-family: "Cities Typeface", serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  color: #848484;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-desc {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24.32px;
+  color: #2a2a2a;
+  max-width: 580px;
+  margin: 0 auto 28px;
+}
+
+.hero-cta {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: var(--green);
+  border: none;
+  padding: 14px 40px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.hero-cta:hover {
+  background: #1e2a22;
+}
+
+.hero-rooms {
+  position: absolute;
+  z-index: 2;
+  bottom: 18%;
+  left: 49%;
+  right: 4%;
+  display: flex;
+  gap: 10px;
+}
+
+.hero-room-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(3px);
+  padding: 10px 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-room-icon {
+  font-size: 36px;
+  color: #848484;
+  flex-shrink: 0;
+}
+.hero-room-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  color: #848484;
+  text-transform: uppercase;
+}
+.hero-room-price {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #3a3a3a;
+  margin-top: 3px;
+}
+
+.hero-mobile-text {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .hero-card {
+    top: 8%;
+    left: 42%;
+    right: 3%;
+    padding: 12px;
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  .hero-rooms {
+    left: 42%;
+    right: 3%;
+    bottom: 8%;
+    gap: 6px;
+  }
+
+  .hero-room-card {
+    padding: 6px;
+    gap: 6px;
+  }
+
+  .hero-room-label {
+    font-size: 12px;
+  }
+
+  .hero-room-price {
+    font-size: 11px;
+  }
+
+  .hero-room-icon {
+    font-size: 18px;
+  }
+}
+
+/* 1280px */
+@media (max-width: 1280px) {
+  .hero-room-label {
+    font-size: 18px;
+  }
+  .hero-room-price {
+    font-size: 14px;
+  }
+  .hero-room-icon {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-card {
+    top: 10%;
+    left: 45%;
+    right: 3%;
+    padding: 10px 14px;
+  }
+
+  .hero-rooms {
+    left: 45%;
+    right: 3%;
+    bottom: 10%;
+    gap: 6px;
+  }
+
+  .hero-room-card {
+    padding: 8px;
+  }
+
+  .hero-room-label {
+    font-size: 14px;
+  }
+
+  .hero-room-price {
+    font-size: 12px;
+  }
+
+  .hero-room-icon {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1024px) and (min-width: 641px) {
+  .hero {
+    height: auto;
+    min-height: unset;
+    aspect-ratio: 16 / 10;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 35% center;
+  }
+
+  .hero-card {
+    top: 6%;
+    left: 40%;
+    right: 3%;
+    padding: 12px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .hero-desc {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+  }
+
+  .hero-cta {
+    padding: 10px 22px;
+    font-size: 12px;
+  }
+
+  .hero-rooms {
+    left: 40%;
+    right: 3%;
+    bottom: 5%;
+    gap: 5px;
+
+    flex-wrap: wrap;
+  }
+
+  .hero-room-card {
+    flex: 1 1 calc(50% - 5px);
+    min-width: 140px;
+
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .hero-room-icon {
+    font-size: 18px;
+  }
+
+  .hero-room-label {
+    font-size: 11px;
+  }
+
+  .hero-room-price {
+    font-size: 10px;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .hero-card {
+    top: 5%;
+    padding: 10px 14px 8px;
+  }
+  .hero-title {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  .hero-desc {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .hero-cta {
+    padding: 10px 28px;
+  }
+  .hero-rooms {
+    flex-wrap: nowrap;
+    gap: 6px;
+    bottom: 4%;
+  }
+  .hero-room-card {
+    flex: 1 1 calc(50% - 3px);
+    padding: 8px 10px;
+    gap: 6px;
+  }
+  .hero-room-label {
+    font-size: 13px;
+  }
+  .hero-room-price {
+    font-size: 12px;
+  }
+  .hero-room-icon {
+    font-size: 20px;
+  }
+}
+
+/* MÓVIL ≤ 640px */
+@media (max-width: 640px) {
+  .hero {
+    height: auto;
+    overflow: visible;
+  }
+
+  .hero-bg {
+    position: relative;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+    z-index: 0;
+  }
+
+  .hero-card {
+    display: none;
+  }
+
+  /* En móvil el verde ocupa ~41% de la imagen */
+  .hero-rooms {
+    position: absolute;
+    top: 8%;
+    bottom: auto;
+    left: 41%;
+    right: 2%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 5px;
+    z-index: 2;
+  }
+
+  .hero-room-card {
+    flex: none;
+    width: 100%;
+    padding: 8px 10px;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.82);
+  }
+  .hero-room-icon {
+    font-size: 16px;
+  }
+  .hero-room-label {
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+  .hero-room-price {
+    font-size: 11px;
+  }
+
+  .hero-mobile-text {
+    display: block;
+    text-align: center;
+    padding: 28px 24px 24px;
+    background: #fff;
+  }
+  .hero-mobile-text .hero-title {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+  .hero-mobile-text .hero-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  .hero-mobile-text .hero-cta {
+    padding: 12px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-rooms {
+    left: 41%;
+    top: 7%;
+    gap: 4px;
+  }
+  .hero-room-card {
+    padding: 7px 9px;
+  }
+  .hero-room-icon {
+    font-size: 15px;
+  }
+  .hero-room-label {
+    font-size: 11px;
+  }
+  .hero-room-price {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-rooms {
+    left: 40%;
+    top: 7%;
+    gap: 3px;
+  }
+  .hero-room-card {
+    padding: 6px 8px;
+    gap: 6px;
+  }
+  .hero-room-icon {
+    font-size: 14px;
+  }
+  .hero-room-label {
+    font-size: 10px;
+  }
+  .hero-room-price {
+    font-size: 10px;
+  }
+}

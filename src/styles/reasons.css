@@ -1,0 +1,262 @@
+/* ===== REASONS SECTION ===== */
+.reasons-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.reasons-green-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22%;
+  height: 100%;
+  background: #2f3d34;
+  z-index: 0;
+}
+
+.reasons-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 680px;
+  align-items: stretch;
+}
+
+/* ---- Left: text ---- */
+.reasons-content {
+  padding: 64px 52px 64px 6%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.reasons-title {
+  font-family: "Cities Typeface", serif;
+  font-weight: 400;
+  font-size: clamp(28px, 3.2vw, 46px);
+  line-height: 1.05;
+  color: #848484;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  max-width: 100%;
+}
+
+.reasons-title-highlight {
+  color: #848484;
+}
+
+.reasons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reasons-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.reasons-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #212529;
+  margin: 0;
+}
+
+.reasons-text strong {
+  font-weight: 600;
+  color: #212529;
+}
+
+/* ---- Right: imagen ---- */
+.reasons-media {
+  position: relative;
+}
+
+.reasons-img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8%;
+  width: 118%;
+  height: 52%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ===== BREAKPOINTS ===== */
+
+@media (max-width: 1280px) {
+  .reasons-green-bg {
+    width: 26%;
+  }
+  .reasons-img {
+    left: 4%;
+    width: 112%;
+    height: 56%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .reasons-green-bg {
+    width: 28%;
+  }
+  .reasons-inner {
+    min-height: 620px;
+  }
+  .reasons-content {
+    padding: 52px 36px 52px 5%;
+  }
+  .reasons-text {
+    font-size: 13.5px;
+  }
+  .reasons-img {
+    left: 2%;
+    width: 106%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 960px) {
+  .reasons-green-bg {
+    width: 30%;
+  }
+  .reasons-inner {
+    grid-template-columns: 1fr 0.8fr;
+    min-height: 580px;
+  }
+  .reasons-content {
+    padding: 44px 28px 44px 5%;
+    gap: 22px;
+  }
+  .reasons-text {
+    font-size: 13px;
+  }
+  .reasons-list {
+    gap: 13px;
+  }
+  .reasons-img {
+    left: 0%;
+    width: 100%;
+    height: 62%;
+  }
+}
+
+/* ---- Tablet: apilado ---- */
+@media (max-width: 768px) {
+  /* El verde se oculta — en móvil lo maneja .reasons-media */
+  .reasons-green-bg {
+    display: none;
+  }
+
+  .reasons-inner {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .reasons-content {
+    padding: 44px 28px 40px;
+    gap: 20px;
+  }
+
+  .reasons-title {
+    font-size: clamp(24px, 6vw, 34px);
+  }
+  .reasons-list {
+    gap: 14px;
+  }
+  .reasons-text {
+    font-size: 13.5px;
+  }
+
+  /* El contenedor de imagen lleva el verde como fondo propio
+     así nunca se monta sobre el texto, sin importar cuánto mida */
+  .reasons-media {
+    background: #2f3d34;
+    /* Padding superior: espacio blanco entre el texto y el verde */
+    padding-top: 40px;
+    /* Altura fija solo para la zona de imagen */
+    height: 340px;
+    position: relative;
+  }
+
+  .reasons-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72%;
+    height: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .reasons-content {
+    padding: 36px 22px 36px;
+  }
+  .reasons-media {
+    height: 300px;
+    padding-top: 32px;
+  }
+  .reasons-img {
+    width: 80%;
+    height: 88%;
+  }
+}
+
+@media (max-width: 480px) {
+  .reasons-content {
+    padding: 32px 20px 32px;
+    gap: 16px;
+  }
+  .reasons-title {
+    font-size: clamp(20px, 7vw, 28px);
+  }
+  .reasons-list {
+    gap: 11px;
+  }
+  .reasons-text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .reasons-media {
+    height: 260px;
+    padding-top: 28px;
+  }
+  .reasons-img {
+    width: 86%;
+    height: 86%;
+  }
+}
+
+@media (max-width: 380px) {
+  .reasons-content {
+    padding: 28px 16px 28px;
+  }
+  .reasons-title {
+    font-size: 19px;
+  }
+  .reasons-text {
+    font-size: 12.5px;
+  }
+  .reasons-media {
+    height: 220px;
+    padding-top: 24px;
+  }
+  .reasons-img {
+    width: 90%;
+    height: 84%;
+  }
+}
