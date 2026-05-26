@@ -1,4 +1,3 @@
-// Amenities.tsx
 import { useState, useRef } from "react";
 import { AMENITIES, AMENITY_IMAGES } from "../../constants/amenities";
 import AmenityCard from "./carrusel/Amenitycard";
@@ -11,10 +10,19 @@ const Amenities = () => {
 
   const handleAmenitySelect = (imageIndex: number) => {
     setCurrent(imageIndex);
-    carouselRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
+
+    if (carouselRef.current) {
+      const rect = carouselRef.current.getBoundingClientRect();
+      // Solo scrollea si el carrusel está completamente por debajo del viewport
+      const isBelowViewport = rect.top > window.innerHeight;
+
+      if (isBelowViewport) {
+        carouselRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
   };
 
   return (

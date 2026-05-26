@@ -1,74 +1,47 @@
-/* ===== GALLERY SECTION ===== */
-
 .gallery-section {
   width: 100%;
-
   background: #f4f4f4;
-
   padding: 72px 56px;
-
   overflow: hidden;
 }
 
 .gallery-content {
   display: flex;
-
   flex-direction: column;
-
   gap: 92px;
 }
-
-/* ========================================================= */
-/* ===================== SHARED BLOCK ====================== */
-/* ========================================================= */
 
 .finishes-section,
 .plants-section {
   width: 100%;
 }
 
+/* Movido a tokens globales: Cities Typeface + var(--color-title) + spec exacta */
 .finishes-title,
 .plants-title {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
   text-align: center;
-
-  font-family: "Cities Typeface", serif;
-
-  font-size: clamp(38px, 4vw, 64px);
-
-  font-weight: 300;
-
-  color: #848484;
-
-  letter-spacing: 0.08em;
-
   text-transform: uppercase;
-
+  color: var(--color-title);
   margin-bottom: 30px;
-
-  line-height: 1;
 }
 
-/* ========================================================= */
-/* ====================== FINISHES ========================= */
-/* ========================================================= */
-
+/* Movido a var(--font-body) + var(--color-green) — antes #2f3d34 hardcoded */
 .finishes-subtitle {
-  text-align: center;
-
-  font-size: 18px;
-
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24.32px;
   letter-spacing: 0.14em;
-
+  text-align: center;
   text-transform: uppercase;
-
-  color: #2f3d34;
-
+  color: var(--color-green);
   margin-bottom: 34px;
 }
-
-/* ========================================================= */
-/* ====================== CAROUSEL ========================= */
-/* ========================================================= */
 
 .finishes-section .carousel-root,
 .plants-section .carousel-root {
@@ -89,10 +62,6 @@
 .plants-section .carousel-side {
   width: 16%;
 }
-
-/* ========================================================= */
-/* ====================== RESPONSIVE ======================= */
-/* ========================================================= */
 
 @media (max-width: 1200px) {
   .gallery-section {
@@ -129,8 +98,6 @@
   }
 
   .finishes-subtitle {
-    font-size: 16px;
-
     margin-bottom: 28px;
   }
 
@@ -159,15 +126,10 @@
     gap: 54px;
   }
 
+  /* Reducido en mobile para que no rompa el layout */
   .finishes-title,
   .plants-title {
-    font-size: 34px;
-  }
-
-  .finishes-subtitle {
-    font-size: 14px;
-
-    margin-bottom: 22px;
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
   }
 
   .finishes-section .carousel-center,
@@ -188,11 +150,6 @@
 
   .gallery-content {
     gap: 42px;
-  }
-
-  .finishes-title,
-  .plants-title {
-    font-size: 30px;
   }
 
   .finishes-section .carousel-stage,

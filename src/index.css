@@ -1,4 +1,25 @@
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
+@font-face {
+  font-family: "Cities Typeface";
+  src:
+    url("../../assets/fonts/CitiesTypeface.woff2") format("woff2"),
+    url("../../assets/fonts/CitiesTypeface.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --color-green: #29362f;
+  --color-title: #848484;
+  --font-title: "Cities Typeface", serif;
+  --font-body: "Montserrat", sans-serif;
+  --navbar-h: 76.91px;
+}
+
+[id] {
+  scroll-margin-top: var(--navbar-h);
+}
 
 * {
   margin: 0;
@@ -12,8 +33,12 @@ body,
   width: 100%;
   min-height: 100vh;
 }
+
 body {
-  font-family: sans-serif;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24.32px;
   background: #fff;
   color: #111;
 }

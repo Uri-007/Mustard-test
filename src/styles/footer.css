@@ -1,0 +1,29 @@
+.footer {
+  width: 100%;
+  background: var(--color-green);
+  padding: 2rem 1.5rem;
+}
+
+.footerContainer {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerText {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24.32px;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+}

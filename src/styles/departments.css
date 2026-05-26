@@ -1,50 +1,28 @@
-/* ===== SECTION ===== */
-
 .departments-section {
   background: #dcdcdc;
-
   padding: 42px 56px 48px;
-
   overflow: hidden;
 }
 
-/* ===== TITLE ===== */
-
 .departments-title {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
   text-align: center;
-
-  font-family: "Cities Typeface", serif;
-
-  font-size: clamp(38px, 4vw, 64px);
-
-  font-weight: 300;
-
-  color: #848484;
-
-  letter-spacing: 0.08em;
-
   text-transform: uppercase;
-
+  color: var(--color-title);
   margin-bottom: 26px;
-
-  line-height: 1;
 }
-
-/* ===== CONTENT ===== */
 
 .departments-content {
   display: grid;
-
   grid-template-columns: 280px 1fr;
-
   gap: 34px;
-
   align-items: start;
-
   min-height: 420px;
 }
-
-/* ===== INFO ===== */
 
 .department-info {
   position: relative;
@@ -62,29 +40,30 @@
 
 .department-prototype,
 .department-levels {
+  font-family: var(--font-body);
   font-size: 24px;
   letter-spacing: 0.12em;
-  color: #29362f;
+  color: var(--color-green);
   margin: 0;
   line-height: 1.2;
 }
 
 .department-area {
+  font-family: var(--font-body);
   font-size: 44px;
   font-weight: 600;
   margin: 14px 0 10px;
   line-height: 1;
-  color: #29362f;
+  color: var(--color-green);
 }
 
 .department-dimensions {
+  font-family: var(--font-body);
   font-size: 20px;
   font-weight: 500;
-  color: #29362f;
+  color: var(--color-green);
   margin-bottom: 18px;
 }
-
-/* ===== LEGEND ===== */
 
 .department-legend {
   display: flex;
@@ -95,12 +74,14 @@
   margin: 0;
 }
 
+/* Movido a var(--font-body) + var(--color-green) */
 .department-legend li {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-family: var(--font-body);
   font-size: 18px;
-  color: #29362f;
+  color: var(--color-green);
   line-height: 1.1;
 }
 
@@ -108,35 +89,23 @@
   width: 18px;
 }
 
-/* ===== PLANS ===== */
-
 .department-plans {
   display: grid;
-
   grid-template-columns: 220px 1fr;
-
   gap: 22px;
-
   align-items: start;
 }
 
-/* ===== SMALL PLAN ===== */
-
 .department-plan-small {
   background: #efefef;
-
   padding: 14px;
 }
 
 .department-plan-small img {
   width: 100%;
-
   display: block;
-
   object-fit: contain;
 }
-
-/* ===== LARGE PLAN ===== */
 
 .department-plan-large {
   background: #efefef;
@@ -151,13 +120,12 @@
   object-fit: contain;
 }
 
-/* ===== RESPONSIVE ===== */
-
 @media (max-width: 1200px) {
   .departments-content {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
   .department-plans {
     grid-template-columns: 1fr;
   }
@@ -207,8 +175,9 @@
     padding: 36px 16px;
   }
 
+  /* Reducido en mobile para que no rompa el layout */
   .departments-title {
-    font-size: 34px;
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 
   .department-area {
