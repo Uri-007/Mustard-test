@@ -16,7 +16,6 @@
   width: 100%;
 }
 
-/* Movido a tokens globales: Cities Typeface + var(--color-title) + spec exacta */
 .finishes-title,
 .plants-title {
   font-family: var(--font-title);
@@ -30,7 +29,6 @@
   margin-bottom: 30px;
 }
 
-/* Movido a var(--font-body) + var(--color-green) — antes #2f3d34 hardcoded */
 .finishes-subtitle {
   font-family: var(--font-body);
   font-weight: 400;
@@ -50,7 +48,7 @@
 
 .finishes-section .carousel-stage,
 .plants-section .carousel-stage {
-  aspect-ratio: 16 / 6;
+  aspect-ratio: 16 / 7;
 }
 
 .finishes-section .carousel-center,
@@ -61,6 +59,19 @@
 .finishes-section .carousel-side,
 .plants-section .carousel-side {
   width: 16%;
+}
+
+/* Contain para mostrar la imagen completa sin recortar */
+.finishes-section .carousel-center-img,
+.plants-section .carousel-center-img {
+  object-fit: contain;
+  background: #fff;
+}
+
+.finishes-section .carousel-side-img,
+.plants-section .carousel-side-img {
+  object-fit: contain;
+  background: #fff;
 }
 
 @media (max-width: 1200px) {
@@ -101,11 +112,6 @@
     margin-bottom: 28px;
   }
 
-  .finishes-section .carousel-stage,
-  .plants-section .carousel-stage {
-    aspect-ratio: 4 / 3;
-  }
-
   .finishes-section .carousel-center,
   .plants-section .carousel-center {
     width: 78%;
@@ -126,7 +132,6 @@
     gap: 54px;
   }
 
-  /* Reducido en mobile para que no rompa el layout */
   .finishes-title,
   .plants-title {
     font-size: clamp(1.8rem, 7vw, 2.8rem);
@@ -154,7 +159,7 @@
 
   .finishes-section .carousel-stage,
   .plants-section .carousel-stage {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 9;
   }
 
   .finishes-section .carousel-center,
