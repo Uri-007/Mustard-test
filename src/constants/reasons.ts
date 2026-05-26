@@ -1,4 +1,6 @@
-export const REASONS = [
+import type { Reason } from "../types/reasons.types";
+
+export const REASONS: Reason[] = [
   {
     title: "Estilo de vida exclusiva",
     desc: "Sé parte del nuevo ícono en Querétaro en una zona estratégica con ubicación clave, cerca de todo.",

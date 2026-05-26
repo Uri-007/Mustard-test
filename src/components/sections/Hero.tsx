@@ -8,7 +8,7 @@ import LiveWorkPlay from "./LiveWorkPlay";
 const Hero = () => {
   return (
     <>
-      <section className="hero" id="hero">
+      <section className="hero" id="proyecto">
         <img src={heroImg} alt="High Point edificio" className="hero-bg" />
 
         <div className="hero-card">

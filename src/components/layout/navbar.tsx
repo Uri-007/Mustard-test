@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import "../../styles/navbar.css";
 import { NAV_ITEMS } from "../../constants/navigation";
-import { useScrollSpy } from "../../hooks/use-scroll-section";
+import { useScrollSpy } from "../../hooks/useScrollSection";
 import logo from "../../assets/images/logo.png";
 
 const Navbar = () => {

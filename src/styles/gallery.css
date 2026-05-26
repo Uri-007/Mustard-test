@@ -1,0 +1,212 @@
+/* ===== GALLERY SECTION ===== */
+
+.gallery-section {
+  width: 100%;
+
+  background: #f4f4f4;
+
+  padding: 72px 56px;
+
+  overflow: hidden;
+}
+
+.gallery-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 92px;
+}
+
+/* ========================================================= */
+/* ===================== SHARED BLOCK ====================== */
+/* ========================================================= */
+
+.finishes-section,
+.plants-section {
+  width: 100%;
+}
+
+.finishes-title,
+.plants-title {
+  text-align: center;
+
+  font-family: "Cities Typeface", serif;
+
+  font-size: clamp(38px, 4vw, 64px);
+
+  font-weight: 300;
+
+  color: #848484;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+
+  line-height: 1;
+}
+
+/* ========================================================= */
+/* ====================== FINISHES ========================= */
+/* ========================================================= */
+
+.finishes-subtitle {
+  text-align: center;
+
+  font-size: 18px;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  color: #2f3d34;
+
+  margin-bottom: 34px;
+}
+
+/* ========================================================= */
+/* ====================== CAROUSEL ========================= */
+/* ========================================================= */
+
+.finishes-section .carousel-root,
+.plants-section .carousel-root {
+  padding-inline: 0;
+}
+
+.finishes-section .carousel-stage,
+.plants-section .carousel-stage {
+  aspect-ratio: 16 / 6;
+}
+
+.finishes-section .carousel-center,
+.plants-section .carousel-center {
+  width: 70%;
+}
+
+.finishes-section .carousel-side,
+.plants-section .carousel-side {
+  width: 16%;
+}
+
+/* ========================================================= */
+/* ====================== RESPONSIVE ======================= */
+/* ========================================================= */
+
+@media (max-width: 1200px) {
+  .gallery-section {
+    padding: 64px 36px;
+  }
+
+  .gallery-content {
+    gap: 74px;
+  }
+
+  .finishes-section .carousel-center,
+  .plants-section .carousel-center {
+    width: 74%;
+  }
+
+  .finishes-section .carousel-side,
+  .plants-section .carousel-side {
+    width: 13%;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-section {
+    padding: 56px 28px;
+  }
+
+  .gallery-content {
+    gap: 64px;
+  }
+
+  .finishes-title,
+  .plants-title {
+    margin-bottom: 24px;
+  }
+
+  .finishes-subtitle {
+    font-size: 16px;
+
+    margin-bottom: 28px;
+  }
+
+  .finishes-section .carousel-stage,
+  .plants-section .carousel-stage {
+    aspect-ratio: 4 / 3;
+  }
+
+  .finishes-section .carousel-center,
+  .plants-section .carousel-center {
+    width: 78%;
+  }
+
+  .finishes-section .carousel-side,
+  .plants-section .carousel-side {
+    width: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 48px 20px;
+  }
+
+  .gallery-content {
+    gap: 54px;
+  }
+
+  .finishes-title,
+  .plants-title {
+    font-size: 34px;
+  }
+
+  .finishes-subtitle {
+    font-size: 14px;
+
+    margin-bottom: 22px;
+  }
+
+  .finishes-section .carousel-center,
+  .plants-section .carousel-center {
+    width: 82%;
+  }
+
+  .finishes-section .carousel-side,
+  .plants-section .carousel-side {
+    width: 8%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-section {
+    padding: 40px 14px;
+  }
+
+  .gallery-content {
+    gap: 42px;
+  }
+
+  .finishes-title,
+  .plants-title {
+    font-size: 30px;
+  }
+
+  .finishes-section .carousel-stage,
+  .plants-section .carousel-stage {
+    aspect-ratio: 1 / 1;
+  }
+
+  .finishes-section .carousel-center,
+  .plants-section .carousel-center {
+    width: 100%;
+  }
+
+  .finishes-section .carousel-side,
+  .plants-section .carousel-side {
+    display: none;
+  }
+}

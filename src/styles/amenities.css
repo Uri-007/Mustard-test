@@ -1,0 +1,551 @@
+/* ===== AMENITIES SECTION ===== */
+
+.amenities-section {
+  width: 100%;
+  background: #fff;
+  padding: 64px 0 0;
+  overflow: hidden;
+}
+
+.amenities-title {
+  font-family: "Cities Typeface", serif;
+  font-weight: 400;
+  font-size: clamp(32px, 4vw, 56px);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #848484;
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+/* ===== GRID ===== */
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 36px 16px;
+
+  max-width: 900px;
+
+  margin: 0 auto 56px;
+
+  padding: 0 24px;
+}
+
+.amenity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+
+  text-align: center;
+}
+
+.amenity-card--clickable {
+  cursor: pointer;
+}
+
+.amenity-card--clickable:hover .amenity-icon,
+.amenity-card--active .amenity-icon {
+  color: #2f3d34;
+}
+
+.amenity-card--clickable:hover .amenity-label,
+.amenity-card--active .amenity-label {
+  color: #2f3d34;
+}
+
+.amenity-card--active .amenity-label {
+  font-weight: 600;
+}
+
+.amenity-icon-wrap {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amenity-icon {
+  font-size: 36px;
+  color: #9a9a9a;
+
+  transition: color 250ms ease;
+}
+
+.amenity-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+
+  color: #6a6a6a;
+
+  text-transform: uppercase;
+
+  line-height: 1.4;
+
+  margin: 0;
+
+  transition: color 250ms ease;
+}
+
+.amenity-sublabel {
+  font-weight: 400;
+  font-size: 9px;
+  color: #8a8a8a;
+}
+
+/* ===== CAROUSEL ===== */
+
+.carousel-root {
+  width: 100%;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
+.carousel-stage {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  aspect-ratio: 16 / 5;
+
+  overflow: hidden;
+
+  user-select: none;
+
+  perspective: 1200px;
+
+  transform: translateZ(0);
+}
+
+/* ===== CENTER ===== */
+
+.carousel-center {
+  position: relative;
+
+  z-index: 2;
+
+  width: 62%;
+  height: 100%;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  transform-style: preserve-3d;
+}
+
+.carousel-center-img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  backface-visibility: hidden;
+
+  transform: translateZ(0);
+
+  will-change: transform, opacity, scale;
+
+  animation-duration: 700ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+
+  contain: paint;
+
+  image-rendering: auto;
+
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ===== SLIDE NEXT ===== */
+
+.carousel-slide-next {
+  animation-name: carouselNext;
+}
+
+/* ===== SLIDE PREV ===== */
+
+.carousel-slide-prev {
+  animation-name: carouselPrev;
+}
+
+/* ===== KEYFRAMES ===== */
+
+@keyframes carouselNext {
+  from {
+    opacity: 0;
+
+    transform: translate3d(100%, 0, 0) scale(1.06);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes carouselPrev {
+  from {
+    opacity: 0;
+
+    transform: translate3d(-100%, 0, 0) scale(1.06);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* ===== SIDE CARDS ===== */
+
+.carousel-side {
+  position: absolute;
+
+  top: 5%;
+  bottom: 5%;
+
+  width: 21%;
+
+  z-index: 1;
+
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+.carousel-side--prev {
+  left: 0;
+}
+
+.carousel-side--next {
+  right: 0;
+}
+
+.carousel-side-img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  will-change: transform, filter;
+
+  transition:
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 600ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  filter: brightness(0.9);
+
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ===== DEPTH EFFECT ===== */
+
+.carousel-side--prev .carousel-side-img {
+  transform: translateX(-6%) scale(0.96);
+}
+
+.carousel-side--next .carousel-side-img {
+  transform: translateX(6%) scale(0.96);
+}
+
+.carousel-side--prev:hover .carousel-side-img {
+  transform: translateX(0%) scale(1);
+  filter: brightness(1);
+}
+
+.carousel-side--next:hover .carousel-side-img {
+  transform: translateX(0%) scale(1);
+  filter: brightness(1);
+}
+
+/* ===== OVERLAY ===== */
+
+.carousel-side-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.52);
+
+  transition:
+    background 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 600ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  pointer-events: none;
+}
+
+.carousel-side:hover .carousel-side-overlay {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* ===== ARROWS ===== */
+
+.carousel-arrow-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 3;
+
+  color: #fff;
+
+  font-size: 28px;
+
+  opacity: 0.55;
+
+  transition:
+    opacity 350ms ease,
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  pointer-events: none;
+}
+
+.carousel-side--prev:hover .carousel-arrow-icon {
+  opacity: 1;
+  transform: translate(calc(-50% - 6px), -50%);
+}
+
+.carousel-side--next:hover .carousel-arrow-icon {
+  opacity: 1;
+  transform: translate(calc(-50% + 6px), -50%);
+}
+
+/* ===== DOTS ===== */
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 18px 0 28px;
+}
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  border: 1.5px solid #9a9a9a;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  padding: 0;
+
+  transition:
+    background 300ms ease,
+    border-color 300ms ease,
+    transform 300ms ease;
+}
+
+.carousel-dot:hover {
+  transform: scale(1.2);
+}
+
+.carousel-dot--active {
+  background: #2f3d34;
+  border-color: #2f3d34;
+
+  transform: scale(1.15);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1100px) {
+  .carousel-root {
+    padding: 0 36px;
+  }
+}
+
+@media (max-width: 900px) {
+  .amenities-section {
+    padding: 52px 0 0;
+  }
+
+  .amenities-title {
+    margin-bottom: 40px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 12px;
+    padding: 0 20px;
+  }
+
+  .amenity-icon {
+    font-size: 32px;
+  }
+
+  .carousel-root {
+    padding: 0 28px;
+  }
+
+  .carousel-stage {
+    aspect-ratio: 16 / 6;
+  }
+
+  .carousel-center {
+    width: 65%;
+  }
+
+  .carousel-side {
+    width: 18%;
+    top: 7%;
+    bottom: 7%;
+  }
+}
+
+@media (max-width: 768px) {
+  .amenities-section {
+    padding: 44px 0 0;
+  }
+
+  .amenities-title {
+    margin-bottom: 32px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px 10px;
+    padding: 0 20px;
+    margin-bottom: 44px;
+  }
+
+  .amenity-icon {
+    font-size: 28px;
+  }
+
+  .amenity-label {
+    font-size: 9px;
+  }
+
+  .carousel-root {
+    padding: 0 20px;
+  }
+
+  .carousel-stage {
+    aspect-ratio: 4 / 3;
+  }
+
+  .carousel-center {
+    width: 68%;
+  }
+
+  .carousel-side {
+    width: 16%;
+    top: 9%;
+    bottom: 9%;
+  }
+
+  .carousel-arrow-icon {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .amenities-section {
+    padding: 36px 0 0;
+  }
+
+  .amenities-title {
+    margin-bottom: 24px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 8px;
+    padding: 0 16px;
+    margin-bottom: 36px;
+  }
+
+  .amenity-icon-wrap {
+    width: 36px;
+    height: 36px;
+  }
+
+  .amenity-icon {
+    font-size: 24px;
+  }
+
+  .amenity-label {
+    font-size: 8.5px;
+  }
+
+  .carousel-root {
+    padding: 0 12px;
+  }
+
+  .carousel-stage {
+    aspect-ratio: 1 / 1;
+  }
+
+  .carousel-center {
+    width: 76%;
+  }
+
+  .carousel-side {
+    width: 12%;
+    top: 11%;
+    bottom: 11%;
+  }
+
+  .carousel-arrow-icon {
+    font-size: 18px;
+  }
+
+  .carousel-dots {
+    gap: 8px;
+    padding: 12px 0 18px;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 8px;
+  }
+
+  .carousel-root {
+    padding: 0 8px;
+  }
+}

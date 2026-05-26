@@ -1,4 +1,4 @@
-import { useScrollSection } from "../../hooks/use-scroll-section";
+import { useScrollSection } from "../../hooks/useScrollSection";
 import type { NavbarLinkProps } from "../../types/navbar.types";
 
 export const NavbarLink = ({ label, target, onClick }: NavbarLinkProps) => {
