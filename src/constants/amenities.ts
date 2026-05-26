@@ -1,6 +1,17 @@
 // constants/amenities.ts
 import type { Amenity, AmenityImage } from "../types/animateImage.types";
 
+import ludoteca from "../assets/images/carrusel/ludoteca.png";
+import alberca from "../assets/images/carrusel/alberca.png";
+import foro from "../assets/images/carrusel/foro.png";
+import biblioteca from "../assets/images/carrusel/biblioteca.png";
+import salon from "../assets/images/carrusel/salon.png";
+import familyRoom from "../assets/images/carrusel/family room.png";
+import lobby from "../assets/images/carrusel/lobby.png";
+import gym from "../assets/images/carrusel/gym.png";
+import pet from "../assets/images/carrusel/pet.png";
+import firepit from "../assets/images/carrusel/firepit.png";
+
 export const AMENITIES: Amenity[] = [
   { icon: "mdi:controller-classic-outline", label: "LUDOTECA", imageIndex: 0 },
   { icon: "mdi:pool", label: "ALBERCA", imageIndex: 1 },
@@ -28,20 +39,14 @@ export const AMENITIES: Amenity[] = [
 ];
 
 export const AMENITY_IMAGES: AmenityImage[] = [
-  { src: "/src/assets/images/carrusel/ludoteca.png", alt: "Ludoteca" },
-  { src: "/src/assets/images/carrusel/alberca.png", alt: "Alberca" },
-  { src: "/src/assets/images/carrusel/foro.png", alt: "Foro" },
-  { src: "/src/assets/images/carrusel/biblioteca.png", alt: "Biblioteca" },
-  {
-    src: "/src/assets/images/carrusel/salon.png",
-    alt: "Salón de usos múltiples",
-  },
-  {
-    src: "/src/assets/images/carrusel/family room.png",
-    alt: "Family Room",
-  },
-  { src: "/src/assets/images/carrusel/lobby.png", alt: "Lobby" },
-  { src: "/src/assets/images/carrusel/gym.png", alt: "Gimnasio" },
-  { src: "/src/assets/images/carrusel/pet.png", alt: "Pet Park" },
-  { src: "/src/assets/images/carrusel/firepit.png", alt: "Fogatero" },
+  { src: ludoteca, alt: "Ludoteca" },
+  { src: alberca, alt: "Alberca" },
+  { src: foro, alt: "Foro" },
+  { src: biblioteca, alt: "Biblioteca" },
+  { src: salon, alt: "Salón de usos múltiples" },
+  { src: familyRoom, alt: "Family Room" },
+  { src: lobby, alt: "Lobby" },
+  { src: gym, alt: "Gimnasio" },
+  { src: pet, alt: "Pet Park" },
+  { src: firepit, alt: "Fogatero" },
 ];

@@ -1,31 +1,18 @@
+import imgGaleria1 from "../assets/images/finishes/img-galeria.png";
+import imgGaleria2 from "../assets/images/finishes/img-galeria2.png";
+import imgGaleria3 from "../assets/images/finishes/img-galeria3.png";
+
 export const FINISHES = [
   {
     label: "Generales",
-    images: [
-      {
-        src: "/src/assets/images/finishes/img-galeria.png",
-        alt: "General",
-      },
-    ],
+    images: [{ src: imgGaleria1, alt: "General" }],
   },
-
   {
     label: "Cocina",
-    images: [
-      {
-        src: "/src/assets/images/finishes/img-galeria2.png",
-        alt: "Kitchen",
-      },
-    ],
+    images: [{ src: imgGaleria2, alt: "Kitchen" }],
   },
-
   {
     label: "Baño",
-    images: [
-      {
-        src: "/src/assets/images/finishes/img-galeria3.png",
-        alt: "Bathroom",
-      },
-    ],
+    images: [{ src: imgGaleria3, alt: "Bathroom" }],
   },
 ];
