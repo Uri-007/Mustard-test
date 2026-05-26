@@ -30,16 +30,18 @@ export const DEPARTMENTS: Department[] = [
 
   {
     id: 2,
-    tab: "52m²",
+    tab: "43.3m²",
     prototype: "Prototipo",
-    levels: "Nivel N2",
-    area: "52.00 m²",
+    levels: "Niveles 4 A 19",
+    area: "43.3 m²",
     dimensions: "26.00m² PB + 26.00m² PA",
     labels: [
-      { key: "A", label: "SALA" },
-      { key: "B", label: "COMEDOR" },
-      { key: "C", label: "COCINA" },
-      { key: "D", label: "BAÑO" },
+       { key: "A", label: "1 REMACARA" },
+       { key: "B", label: "SALA" },
+       { key: "C", label: "1 BAÑO" },
+       { key: "D", label: "COMEDOR" },
+       { key: "E", label: "COCINA" },
+      
     ],
     smallPlan: {
       src: "/src/assets/images/departments/Container2.png",
@@ -53,15 +55,19 @@ export const DEPARTMENTS: Department[] = [
 
   {
     id: 3,
-    tab: "60m²",
+    tab: "50.9m²",
     prototype: "Prototipo",
-    levels: "Nivel N3",
-    area: "60.00 m²",
+    levels: "Niveles 4 A 19",
+    area: "50.9 m²",
     dimensions: "30.00m² PB + 30.00m² PA",
     labels: [
-      { key: "A", label: "RECÁMARA" },
-      { key: "B", label: "BAÑO" },
-      { key: "C", label: "COCINA" },
+     { key: "A", label: "1 REMACARA" },
+      { key: "B", label: "FAMILY ROOM" },
+      { key: "C", label: "1 BAÑO" },
+      { key: "D", label: "COMEDOR" },
+      { key: "E", label: "COCINA" },
+      { key: "F", label: "WALK-IN CLOSET" },
+      { key: "G", label: "SALA" },
     ],
     smallPlan: {
       src: "/src/assets/images/departments/Container3.png",
@@ -75,15 +81,18 @@ export const DEPARTMENTS: Department[] = [
 
   {
     id: 4,
-    tab: "65m²",
+    tab: "65.0m²",
     prototype: "Prototipo",
-    levels: "Nivel N4",
+    levels: "Niveles 4 A 19",
     area: "65.00 m²",
     dimensions: "32.50m² PB + 32.50m² PA",
     labels: [
-      { key: "A", label: "TERRAZA" },
-      { key: "B", label: "SALA" },
-      { key: "C", label: "COCINA" },
+      { key: "A", label: "2 REMACARAS" },
+      { key: "B", label: "2 BAÑOS" },
+      { key: "C", label: "COMEDOR" },
+      { key: "D", label: "COCINA" },
+      { key: "E", label: "CUARTO DE LAVADO" },
+      { key: "F", label: "SALA" },
     ],
     smallPlan: {
       src: "/src/assets/images/departments/Container4.png",
@@ -97,14 +106,18 @@ export const DEPARTMENTS: Department[] = [
 
   {
     id: 5,
-    tab: "70m²",
+    tab: "68.4m²",
     prototype: "Prototipo",
-    levels: "Nivel N5",
-    area: "70.00 m²",
+    levels: "Niveles 4 A 19",
+    area: "68.4 m²",
     dimensions: "35.00m² PB + 35.00m² PA",
     labels: [
-      { key: "A", label: "RECÁMARA PRINCIPAL" },
-      { key: "B", label: "BAÑO" },
+      { key: "A", label: "2 REMACARAS" },
+      { key: "B", label: "2 BAÑOS" },
+      { key: "C", label: "COMEDOR" },
+      { key: "D", label: "COCINA" },
+      { key: "E", label: "CUARTO DE LAVADO" },
+      { key: "F", label: "SALA" },
     ],
     smallPlan: {
       src: "/src/assets/images/departments/Container5.png",
@@ -118,15 +131,18 @@ export const DEPARTMENTS: Department[] = [
 
   {
     id: 6,
-    tab: "75m²",
+    tab: "80.4m²",
     prototype: "Prototipo",
-    levels: "Nivel N6",
-    area: "75.00 m²",
+    levels: "Niveles 4 A 19",
+    area: "80.4 m²",
     dimensions: "37.50m² PB + 37.50m² PA",
     labels: [
-      { key: "A", label: "SALA" },
-      { key: "B", label: "COMEDOR" },
-      { key: "C", label: "TERRAZA" },
+      { key: "A", label: "3 REMACARAS" },
+      { key: "B", label: "2 BAÑOS" },
+      { key: "C", label: "COMEDOR" },
+      { key: "D", label: "COCINA" },
+      { key: "E", label: "CUARTO DE LAVADO" },
+      { key: "F", label: "SALA" },
     ],
     smallPlan: {
       src: "/src/assets/images/departments/Container6.png",
@@ -140,14 +156,18 @@ export const DEPARTMENTS: Department[] = [
 
   {
     id: 7,
-    tab: "80m²",
+    tab: "84.7m²",
     prototype: "Prototipo",
-    levels: "Nivel N7",
-    area: "80.00 m²",
+    levels: "Niveles PB, 1 y 4 al 19",
+    area: "84.7 m²",
     dimensions: "40.00m² PB + 40.00m² PA",
     labels: [
-      { key: "A", label: "2 RECÁMARAS" },
+      { key: "A", label: "3 REMACARAS" },
       { key: "B", label: "2 BAÑOS" },
+      { key: "C", label: "COMEDOR" },
+      { key: "D", label: "COCINA" },
+      { key: "E", label: "CUARTO DE LAVADO" },
+      { key: "F", label: "SALA" },
     ],
     smallPlan: {
       src: "/src/assets/images/departments/Container7.png",
@@ -161,14 +181,19 @@ export const DEPARTMENTS: Department[] = [
 
   {
     id: 8,
-    tab: "85m²",
+    tab: "88.4m²",
     prototype: "Prototipo",
-    levels: "Nivel N8",
-    area: "85.00 m²",
+    levels: "Niveles N2 al N3",
+    area: "88.4 m²",
     dimensions: "42.50m² PB + 42.50m² PA",
     labels: [
-      { key: "A", label: "COCINA INTEGRAL" },
-      { key: "B", label: "LAVANDERÍA" },
+      { key: "A", label: "ESCALERA" },
+      { key: "B", label: "SALA" },
+      { key: "C", label: "COMEDOR" },
+      { key: "D", label: "COINA" },
+      { key: "E", label: "2 RECAMARAS" },
+      { key: "F", label: "3 BAÑOS" },
+      { key: "G", label: "WALK-IN CLOSET" },
     ],
     smallPlan: {
       src: "/src/assets/images/departments/Container8.png",
