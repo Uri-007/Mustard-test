@@ -1,4 +1,3 @@
-// components/AmenityCard.tsx
 import { Icon } from "@iconify/react";
 import type { Amenity } from "../../../types/animateImage.types";
 

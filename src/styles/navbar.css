@@ -52,7 +52,6 @@
   gap: 32px;
 }
 
-/* Movido a var(--font-body) + spec exacta */
 .nav-link,
 .nav-mobile-item {
   font-family: var(--font-body);

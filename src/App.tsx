@@ -18,9 +18,9 @@ function App() {
         <Amenities />
         <Department />
         <Gallery />
-        <Location/>
+        <Location />
         <Contact />
-        <Footer/>
+        <Footer />
       </main>
       <WhatsappButton />
     </>

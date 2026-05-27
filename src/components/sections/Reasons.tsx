@@ -8,7 +8,6 @@ const Reasons = () => {
       <div className="reasons-green-bg" aria-hidden="true" />
 
       <div className="reasons-inner">
-        {/* Left: text content */}
         <div className="reasons-content">
           <h2 className="reasons-title">
             Razones para elegir comprar en{" "}
@@ -28,7 +27,6 @@ const Reasons = () => {
           </ul>
         </div>
 
-        {/* Right: image collage */}
         <div className="reasons-media">
           <img
             src={sectionImg}

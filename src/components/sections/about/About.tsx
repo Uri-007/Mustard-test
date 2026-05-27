@@ -1,7 +1,4 @@
-// src/components/about/about.tsx
-
 import "../../../styles/about.css";
-
 import aboutImage from "../../../assets/images/location/fachada.png";
 
 const About = () => {
@@ -24,7 +21,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* RIGHT */}
       <div className="aboutImageContainer">
         <img
           src={aboutImage}

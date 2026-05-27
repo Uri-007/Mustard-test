@@ -5,7 +5,6 @@ import type {
 
 interface Props {
   image: CarouselImageItem;
-
   direction: SlideDirection;
 }
 

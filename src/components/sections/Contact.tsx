@@ -1,5 +1,3 @@
-// src/components/contact/contact.tsx
-
 import { Icon } from "@iconify/react";
 import "../../styles/contact.css";
 

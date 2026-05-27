@@ -6,8 +6,6 @@
   min-height: 700px;
 }
 
-/* LEFT SIDE */
-
 .aboutContent {
   display: flex;
   align-items: center;
@@ -21,7 +19,6 @@
   max-width: 650px;
 }
 
-/* Movido a Cities Typeface + verde + tokens globales */
 .aboutTitle {
   margin-bottom: 3rem;
   font-family: var(--font-title);
@@ -34,7 +31,6 @@
   color: var(--color-title);
 }
 
-/* Movido a Montserrat con spec exacta */
 .aboutDescription {
   font-family: var(--font-body);
   font-weight: 400;
@@ -42,8 +38,6 @@
   line-height: 24.32px;
   color: #4f4f4f;
 }
-
-/* RIGHT SIDE */
 
 .aboutImageContainer {
   display: flex;
@@ -60,8 +54,6 @@
   display: block;
 }
 
-/* LAPTOP */
-
 @media (max-width: 1400px) {
   .about {
     min-height: 600px;
@@ -77,8 +69,6 @@
     margin-bottom: 2rem;
   }
 }
-
-/* TABLET */
 
 @media (max-width: 900px) {
   .about {
@@ -101,14 +91,11 @@
   }
 }
 
-/* MOBILE */
-
 @media (max-width: 640px) {
   .aboutContent {
     padding: 3rem 1.5rem;
   }
 
-  /* font-size reducido en mobile porque 48px fijo puede romper layout */
   .aboutTitle {
     margin-bottom: 1.5rem;
     font-size: clamp(2rem, 8vw, 3rem);

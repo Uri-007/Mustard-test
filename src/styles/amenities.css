@@ -287,7 +287,6 @@
   transform: scale(1.2);
 }
 
-/* Movido dot activo a var(--color-green) */
 .carousel-dot--active {
   background: var(--color-green);
   border-color: var(--color-green);

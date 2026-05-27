@@ -1,11 +1,8 @@
 import { useState } from "react";
-
 import Tabs from "./tabs/Tabs";
-
 import BaseCarousel from "./carrusel/BaseCarousel";
 import CarouselImage from "./carrusel/CarouselImage";
 import CarouselSideCard from "./carrusel/CarouselSideCard";
-
 import { FINISHES } from "../../constants/finishes";
 
 const Finishes = () => {

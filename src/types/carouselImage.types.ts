@@ -6,14 +6,3 @@ export interface PropsCarouselImage {
   animKey: number;
   direction: SlideDirection;
 }
-
-export interface PropsSlide {
-  image: AmenityImage;
-  animKey: number;
-  direction: SlideDirection;
-}
-
-export interface Slide {
-  image: AmenityImage;
-  id: number;
-}

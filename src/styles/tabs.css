@@ -7,7 +7,6 @@
   margin-bottom: 34px;
 }
 
-/* Movido a var(--font-body) */
 .section-tab {
   border: 1px solid transparent;
   outline: none;
@@ -32,7 +31,6 @@
   transform: translateY(-2px);
 }
 
-/* Movido a var(--color-green) — antes #26342d hardcoded */
 .section-tab--active {
   background: var(--color-green);
   color: #ffffff;

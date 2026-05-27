@@ -1,4 +1,3 @@
-// components/AmenityCarousel.tsx
 import { useCarouselAnimation } from "../../../hooks/useCarouselAnimation";
 import { useCarouselNavigation } from "../../../hooks/useCarouselNavigation";
 import { useDragSwipe } from "../../../hooks/useDragSwipe";
